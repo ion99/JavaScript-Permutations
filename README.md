@@ -16,6 +16,6 @@ Array ['a', 'b', 'c'] permutations:
   [ 'c', 'b', 'a' ] ];
 
 
-String ['abc'] permutations:
+String 'abc' permutations:
 
 [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ];  
