@@ -1,20 +1,18 @@
-function permutator (str) { //arr
-  //var arr = str.split("");
+function permutator (str) { 
+
   var permutations = [];
-  if (str.length === 1) { //arr
-    return [ str ];   //arr
+  if (str.length === 1) { 
+    return [ str ];
   }
 
   for (var i = 0; i <  str.length; i++) { 
-    // var subPerms = permutator((arr.slice(0, i).concat(arr.slice(i + 1))).join(""));
     var subPerms = permutator(str.substr(0, i).concat(str.substr(i + 1)));
     for (var j = 0; j < subPerms.length; j++) {
-      //subPerms[j].unshift(arr[i]);
       var sub = str[i].concat(subPerms[j]);
       permutations.push(sub);
     }
   }
-  return permutations;
-  
+  return permutations; 
 }
-permutator("abcd");
+
+//permutator("abcd");
